@@ -363,10 +363,12 @@ if(NOT DORADO_DISABLE_DORADO)
     endif()
 
     target_link_libraries(dorado
-        dorado_lib
+	    PUBLIC dorado_lib
         dorado_io_lib
         dorado_models_lib
         minimap2
+	PRIVATE htslib
+	deflate
     )
 
     if (DEFINED DORADO_INSTALL_PATH)

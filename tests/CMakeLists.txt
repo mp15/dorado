@@ -81,6 +81,8 @@ foreach(TEST_BIN dorado_tests dorado_smoke_tests)
         minimap2
         ${ZLIB_LIBRARIES}
         ${POD5_LIBRARIES}
+	htslib
+	deflate
         )
 
     target_include_directories(${TEST_BIN}
