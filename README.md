@@ -19,10 +19,10 @@ If you encounter any problems building or running Dorado, please [report an issu
 
 ## Installation
 
- - [dorado-0.5.2-linux-x64](https://cdn.oxfordnanoportal.com/software/analysis/dorado-0.5.2-linux-x64.tar.gz)
- - [dorado-0.5.2-linux-arm64](https://cdn.oxfordnanoportal.com/software/analysis/dorado-0.5.2-linux-arm64.tar.gz)
- - [dorado-0.5.2-osx-arm64](https://cdn.oxfordnanoportal.com/software/analysis/dorado-0.5.2-osx-arm64.zip)
- - [dorado-0.5.2-win64](https://cdn.oxfordnanoportal.com/software/analysis/dorado-0.5.2-win64.zip)
+ - [dorado-0.5.3-linux-x64](https://cdn.oxfordnanoportal.com/software/analysis/dorado-0.5.3-linux-x64.tar.gz)
+ - [dorado-0.5.3-linux-arm64](https://cdn.oxfordnanoportal.com/software/analysis/dorado-0.5.3-linux-arm64.tar.gz)
+ - [dorado-0.5.3-osx-arm64](https://cdn.oxfordnanoportal.com/software/analysis/dorado-0.5.3-osx-arm64.zip)
+ - [dorado-0.5.3-win64](https://cdn.oxfordnanoportal.com/software/analysis/dorado-0.5.3-win64.zip)
 
 ## Platforms
 
@@ -253,9 +253,9 @@ In addition to supporting the standard barcode kits from Oxford Nanopore, Dorado
 
 ### Poly(A) tail estimation
 
-Dorado has initial support for estimating poly(A) tail lengths for cDNA and RNA. Note that Oxford Nanopore cDNA reads are sequenced in two different orientations and Dorado poly(A) tail length estimation handles both (A and T homopolymers). This feature can be enabled by passing `--estimate-poly-a` to the `basecaller` command. It is disabled by default. The estimated tail length is stored in the `pt:i` tag of the output record. Reads for which the tail length could not be estimated will not have the `pt:i` tag.
+Dorado has initial support for estimating poly(A) tail lengths for cDNA (PCS and PCB kits) and RNA. Note that Oxford Nanopore cDNA reads are sequenced in two different orientations and Dorado poly(A) tail length estimation handles both (A and T homopolymers). This feature can be enabled by passing `--estimate-poly-a` to the `basecaller` command. It is disabled by default. The estimated tail length is stored in the `pt:i` tag of the output record. Reads for which the tail length could not be estimated will not have the `pt:i` tag.
 
-Note that if this option is used, then adapter and primer trimming will be automatically disabled.
+Note that if this option is used, then adapter/primer/barcode trimming will be automatically **disabled** for DNA.
 
 ## Available basecalling models
 
